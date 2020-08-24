@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using System.Threading.Tasks;
+// using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pokedex.Models;
 
