@@ -12150,23 +12150,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/MamaJude/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\trist\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/MamaJude/Desktop/Pokedex.Solution/Pokedex/Pokedex.csproj",
+      "projectUniqueName": "C:\\Users\\trist\\Epicodus-Week-14\\Pokedex.Solution\\Pokedex\\Pokedex.csproj",
       "projectName": "Pokedex",
-      "projectPath": "/Users/MamaJude/Desktop/Pokedex.Solution/Pokedex/Pokedex.csproj",
-      "packagesPath": "/Users/MamaJude/.nuget/packages/",
-      "outputPath": "/Users/MamaJude/Desktop/Pokedex.Solution/Pokedex/obj/",
+      "projectPath": "C:\\Users\\trist\\Epicodus-Week-14\\Pokedex.Solution\\Pokedex\\Pokedex.csproj",
+      "packagesPath": "C:\\Users\\trist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\trist\\Epicodus-Week-14\\Pokedex.Solution\\Pokedex\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/MamaJude/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\trist\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
