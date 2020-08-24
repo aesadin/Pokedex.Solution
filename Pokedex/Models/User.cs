@@ -12,7 +12,6 @@ namespace Pokedex.Models
   {
     public int UserId { get; set; }
     public string Name { get; set; }
-    public
-    public 
+    public ICollection<Pokemon> Pokemon { get; set; }
   }
 }

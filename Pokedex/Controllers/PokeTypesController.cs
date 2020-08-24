@@ -9,36 +9,28 @@ namespace Pokedex.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TypesController : ControllerBase
+    public class PokeTypesController : ControllerBase
     {
         private PokedexContext _db;
 
-        public TypesController(PokedexContext db)
+        public PokeTypesController(PokedexContext db)
         {
           _db = db;
         }
 
-        // GET api/type
+        // GET api/poketype
+
         [HttpGet]
         public ActionResult<IEnumerable<PokeType>> Get()
         {
           return _db.PokeTypes.ToList();
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<PokeType>> Get(string typeName)
-        var query = _db.PokeTypes.AsQueryable();
-
-
-        {
-          return _db.Types.ToList();
-        }
-
-        // GET api/type/5
+        // GET api/poketype/5
         [HttpGet("{id}")]
-        public ActionResult<Type> Get(int id)
+        public ActionResult<PokeType> Get(int id)
         {
-          return _db.PokeTypes.FirstOrDefault(entry => entry.TypeId == id);
+          return _db.PokeTypes.FirstOrDefault(entry => entry.PokeTypeId == id);
         }
     }
 }

@@ -2,14 +2,14 @@ using System.Collections.Generic;
 
 namespace Pokedex.Models
 {
-  public class Type
+  public class PokeType
   {
-    public Type()
+    public PokeType()
     {
       this.Pokemon = new HashSet<Pokemon>();
     }
-    public int TypeId { get; set; }
-    public string TypeName { get; set; }
+    public int PokeTypeId { get; set; }
+    public string PokeTypeName { get; set; }
     public ICollection<Pokemon> Pokemon { get; set; }
   }
 }
