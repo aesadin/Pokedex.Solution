@@ -109,3 +109,4 @@ Client
 - Create Views for Pokemon (index, details, create)
 - Create Views for Type (index, details)
 - Create Views for User (index, details, create, update, delete)
+
