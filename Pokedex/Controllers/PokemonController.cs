@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ namespace Pokedex.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PokemonsController : ControllerBase
+    public class PokemonController : ControllerBase
     {
         private PokedexContext _db;
 
@@ -27,9 +27,9 @@ namespace Pokedex.Controllers
 
         // GET api/pokemon/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Pokemon> Get(int id)
         {
-            return "value";
+            return _db.Pokemon.FirstOrDefault(entry => entry.PokemonId == id);
         }
 
         // // POST api/pokemon
