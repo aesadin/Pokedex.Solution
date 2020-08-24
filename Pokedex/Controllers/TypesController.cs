@@ -11,25 +11,25 @@ namespace Pokedex.Controllers
     [ApiController]
     public class TypesController : ControllerBase
     {
-      private PokedexContext _db;
+        private PokedexContext _db;
 
-      public TypesController(PokedexContext db)
-      {
-        _db = db;
-      }
+        public TypesController(PokedexContext db)
+        {
+          _db = db;
+        }
 
-      // GET api/type
-      [HttpGet]
-      public ActionResult<IEnumerable<Type>> Get()
-      {
-        return _db.Type.ToList();
-      }
+        // GET api/type
+        [HttpGet]
+        public ActionResult<IEnumerable<Type>> Get()
+        {
+          return _db.Types.ToList();
+        }
 
-      // GET api/type/5
-      [HttpGet("{id}")]
-      public ActionResult<Type> Get(int id)
-      {
-        return _db.Type.FirstOrDefault(entry => entry.TypeId == id);
-      }
+        // GET api/type/5
+        [HttpGet("{id}")]
+        public ActionResult<Type> Get(int id)
+        {
+          return _db.Types.FirstOrDefault(entry => entry.TypeId == id);
+        }
     }
 }
