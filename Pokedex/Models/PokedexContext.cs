@@ -10,7 +10,6 @@ namespace Pokedex.Models
     public DbSet<User> Users { get; set; }
     public DbSet<Pokemon> Pokemon { get; set; }
     public DbSet<Type> Types { get; set; }
-    public DbSet<PokemonType> PokemonTypes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -170,7 +169,20 @@ namespace Pokedex.Models
     }
     builder.Entity<Type>()
       .HasData(
-        
+        new Type { TypeId = 1, TypeName = "Grass"},
+        new Type { TypeId = 2, TypeName = "Fire"},
+        new Type { TypeId = 3, TypeName = "Water"},
+        new Type { TypeId = 4, TypeName = "Bug"},
+        new Type { TypeId = 5, TypeName = "Normal"},
+        new Type { TypeId = 6, TypeName = "Poison"},
+        new Type { TypeId = 7, TypeName = "Electric"},
+        new Type { TypeId = 8, TypeName = "Ground"},
+        new Type { TypeId = 9, TypeName = "Fighting"},
+        new Type { TypeId = 10, TypeName = "Psychic"},
+        new Type { TypeId = 11, TypeName = "Rock"},
+        new Type { TypeId = 12, TypeName = "Ghost"},
+        new Type { TypeId = 13, TypeName = "Ice"},
+        new Type { TypeId = 14, TypeName = "Dragon"}
       )
   }
 }
