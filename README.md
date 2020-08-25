@@ -100,13 +100,15 @@ API
 - Make get, post, put and delete for UsersController
 
 Client
+- Create UsersController
+x Create Model for ApiHelper
+- Create views folders for Pokemon, Type and User(X)
+
+
+- Create Home view and controller
 - Create Register ViewModel
 - Create Login ViewModel
-- Create AccountsController
-- Create Model for ApiHelper
-- Create views folders for Pokemon, Type and User
-- Create Home view and controller
 - Create Views for Pokemon (index, details, create)
-- Create Views for Type (index, details)
+X Create Views for Type (index, details)
 - Create Views for User (index, details, create, update, delete)
 

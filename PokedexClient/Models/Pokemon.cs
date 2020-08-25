@@ -46,15 +46,21 @@ namespace PokedexClient.Models
       return pokemon;
     }
 
-    public static void Post(Pokemon pokemon)
-    {
-      string jsonPokemon = JsoneConvert.SerializeObject(pokemon);
-      var apiCallTask = ApiHelper.Post(jsonPokemon);
-    }
+    // public static void Post(Pokemon pokemon)
+    // {
+    //   string jsonPokemon = JsoneConvert.SerializeObject(pokemon);
+    //   var apiCallTask = ApiHelper.Post(jsonPokemon);
+    // }
     
-    public static void Put(Pokemon pokemon)
-    {
-      string jsonPokemon = JsonConvert.SerializeObject(pokemon);
-    }
+    // public static void Put(Pokemon pokemon)
+    // {
+    //   string jsonPokemon = JsonConvert.SerializeObject(pokemon);
+    //   var apiCallTask = ApiHelper.Put(pokemon.PokemonId, jsonPokemon);
+    // }
+
+    // public static void Delete(int id)
+    // {
+    //   var apiCallTask = ApiHelper.Delete(id);
+    // }
   }
 }
