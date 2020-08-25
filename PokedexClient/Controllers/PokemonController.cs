@@ -14,7 +14,7 @@ namespace PokedexClient.Controllers
   {
     public IActionResult Index()
     {
-      var allPokemon = Pokemon.GetPokemons();
+      var allPokemon = Pokemon.GetPokemon();
       return View(allPokemon);
     }
 

@@ -25,7 +25,7 @@ namespace PokedexClient.Models
     public int Speed { get; set; }
     public string Ability { get; set; }
 
-    public static List<Pokemon> GetPokemons()
+    public static List<Pokemon> GetPokemon()
     {
       var apiCallTask = ApiHelper.GetAll();
       var result = apiCallTask.Result;
@@ -50,6 +50,11 @@ namespace PokedexClient.Models
     {
       string jsonPokemon = JsoneConvert.SerializeObject(pokemon);
       var apiCallTask = ApiHelper.Post(jsonPokemon);
+    }
+    
+    public static void Put(Pokemon pokemon)
+    {
+      string jsonPokemon = JsonConvert.SerializeObject(pokemon);
     }
   }
 }
