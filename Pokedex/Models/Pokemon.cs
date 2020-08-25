@@ -1,1 +1,23 @@
-new Pokemon { PokemonId = 1, TypeId =1 , Species = "Bulbasaur", Description = "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.", Weight = 6.9, Height = 0.7, ImageMain = "https://coding-assets.s3-us-west-2.amazonaws.com/pokemon/fight/bulbasaur.png", ImageSprite = "https://coding-assets.s3-us-west-2.amazonaws.com/pokemon/sprite/bulbasaur.gif", ImageSilhouette = "https://coding-assets.s3-us-west-2.amazonaws.com/pokemon/silhouette/bulbasaur.png", Hp = 45, Attack = 49, Defense = 49, SpAtk = 65, SpDef = 65, Speed = 45},
+
+namespace Pokedex.Models
+{
+  public class Pokemon
+  {
+    public int PokemonId { get; set; }
+    public int PokeTypeId { get; set; }
+    public string Species { get; set; }
+    public string Description { get; set; }
+    public double Weight { get; set; }
+    public double Height { get; set; }
+    public string ImageMain { get; set; }
+    public string ImageSprite { get; set; }
+    public string ImageSilhouette { get; set; }
+    public int Hp { get; set; }
+    public int Attack { get; set; }
+    public int Defense { get; set; }
+    public int SpAtk { get; set; }
+    public int SpDef { get; set; }
+    public int Speed { get; set; }
+    public string Ability { get; set; }
+  }
+}

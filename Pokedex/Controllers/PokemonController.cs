@@ -3,43 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Pokedex.Models;
 
 namespace Pokedex.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class PokemonController : ControllerBase
     {
-        // GET api/values
+        private PokedexContext _db;
+
+        public PokemonController(PokedexContext db)
+        {
+            _db = db;
+        }
+
+        // GET api/pokemon
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Pokemon>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _db.Pokemon.ToList();
         }
 
-        // GET api/values/5
+        // GET api/pokemon/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Pokemon> Get(int id)
         {
-            return "value";
+            return _db.Pokemon.FirstOrDefault(entry => entry.PokemonId == id);
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        // // POST api/pokemon
+        // [HttpPost]
+        // public void Post([FromBody] string value)
+        // {
+        // }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        // // PUT api/pokemon/5
+        // [HttpPut("{id}")]
+        // public void Put(int id, [FromBody] string value)
+        // {
+        // }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        // // DELETE api/pokemon/5
+        // [HttpDelete("{id}")]
+        // public void Delete(int id)
+        // {
+        // }
     }
 }

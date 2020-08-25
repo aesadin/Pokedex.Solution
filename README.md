@@ -95,7 +95,7 @@ API
 - Create User Model
 - Create PokemonTypes Model
 - Create UserPokemon Model
-- Make GET PokemonsController
+- Make GET PokemonController
 - Make GET TypesController
 - Make get, post, put and delete for UsersController
 
