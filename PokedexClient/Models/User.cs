@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace Pokedex.Models
+namespace PokedexClient.Models
 {
   public class User : IdentityUser
   {

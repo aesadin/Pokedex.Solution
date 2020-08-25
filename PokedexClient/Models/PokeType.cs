@@ -15,5 +15,25 @@ namespace PokedexClient.Models
     public int PokeTypeId { get; set; }
     public string PokeTypeName { get; set; }
     public ICollection<Pokemon> Pokemon { get; set; }
+
+    public static List<PokeType> GetPokeTypes()
+    {
+      var apiCallTask = ApiHelper.GetAll();
+      var result = apiCallTask.Result;
+
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<PokeType> pokeList = JsonConvert.DeserializeObject<List<PokeType>>(jsonResponse.ToString());
+
+      return pokeList;
+    }
+    public static PokeType GetDetails(int id)
+    {
+      vArgIterator apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<PokeType>(jsonResponse.ToString());
+
+      return review;
+    }
   }
 }
