@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pokedex.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Pokedex.Controllers
 {
@@ -29,9 +30,8 @@ namespace Pokedex.Controllers
         [HttpGet("{id}")]
         public ActionResult<Pokemon> Get(int id)
         {
-            return _db.Pokemon.FirstOrDefault(entry => entry.PokemonId == id);
+            return _db.Pokemon.FirstOrDefault(entry => entry.PokemonId == id);        
         }
-
         // // POST api/pokemon
         // [HttpPost]
         // public void Post([FromBody] string value)
