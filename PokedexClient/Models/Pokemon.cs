@@ -28,7 +28,7 @@ namespace PokedexClient.Models
     public static List<Pokemon> GetPokemons()
     {
       var apiCallTask = ApiHelper.GetAll();
-      var result = apiCallerTask.Result;
+      var result = apiCallTask.Result;
 
       JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
       List<Pokemon> pokemonList = JsonConvert.DeserializeObject<List<Pokemon>>(jsonResponse.ToString());
@@ -39,6 +39,16 @@ namespace PokedexClient.Models
     public static Pokemon GetDetails(int id)
     {
       var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializationObject<JObject>(result);
+      Pokemon pokemon = JsonConvert.DeserializeObject<Pokemon>(jsonResponse.ToString());
+      return pokemon;
+    }
+
+    public static void Post(Pokemon pokemon)
+    {
+      string jsonPokemon = JsoneConvert.SerializeObject
     }
   }
 }
