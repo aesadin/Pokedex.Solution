@@ -48,7 +48,8 @@ namespace PokedexClient.Models
 
     public static void Post(Pokemon pokemon)
     {
-      string jsonPokemon = JsoneConvert.SerializeObject
+      string jsonPokemon = JsoneConvert.SerializeObject(pokemon);
+      var apiCallTask = ApiHelper.Post(jsonPokemon);
     }
   }
 }
