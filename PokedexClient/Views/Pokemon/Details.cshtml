@@ -2,9 +2,9 @@
   Layout = "_Layout";
 }
 
-@model Pokedex.Models.Pokemon
+@model PokedexClient.Models.Pokemon
 
-<h1>@Html.DisplayFor(model => model.PokemonName) 's stats</h1>
+<h1>@Html.DisplayFor(model => model.Species) 's stats</h1>
 <h2>Type: @ViewBag.pokeTypeBag</h2>
 <hr/>
 <h3>@Html.DisplayNameFor(model => model.PokemonId): @Html.DisplayFor(model => model.PokemonId)</h3><br>

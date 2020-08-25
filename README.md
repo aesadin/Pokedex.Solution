@@ -8,9 +8,9 @@
 
 ## User Stories
 
-<!-- MVP: full crud functionality(GET for general users. POST, PUT, DESTROY for specific users), two classes (Pokemon and Type), seeded data for all 151 Pokemon, seeded data for all 13 Types, fully functional API, full ui -->
+<!-- MVP: full crud functionality(GET for general users. POST, PUT, DESTROY for specific users), two classes (Pokemon and Type), seeded data for all 151 Pokemon, seeded data for all 13 Types, fully functional API, full ui, Identity authentication -->
 
-<!-- Stretch goals: Authentication, Silhouette guessing game, MyTeam creator, -->
+<!-- Stretch goals: publish project, Silhouette guessing game, MyTeam creator, -->
 
 * As a Pokemon Master, I need to be able to create a user profile, So that I can access my user specific information. (CREATE)
 
@@ -90,25 +90,27 @@ Copyright (c) 2020 **_Tristan Emmerson, James Henager, Taylor Phillips, Allison 
 Tasks:
 
 API
-- Create Pokemon Model
-- Create Types Model
-- Create User Model
-- Create PokemonTypes Model
-- Create UserPokemon Model
+X Create Pokemon Model
+X Create PokeTypes Model
+X Create User Model
+X Create PokemonTypes Model
+X Create UserPokemon Model
 - Make GET PokemonController
-- Make GET TypesController
-- Make get, post, put and delete for UsersController
+- Make GET PokeTypesController
+X Make get, post, put and delete for UsersController
 
 Client
-- Create UsersController
+X Create UsersController
 x Create Model for ApiHelper
 - Create views folders for Pokemon, Type and User(X)
 
 
 - Create Home view and controller
-- Create Register ViewModel
-- Create Login ViewModel
+    *still need to fix up home details
+X Create Register ViewModel
+X Create Login ViewModel
 - Create Views for Pokemon (index, details, create)
+    *still need to fix up details
 X Create Views for Type (index, details)
-- Create Views for User (index, details, create, update, delete)
+X Create Views for User (index, details, create, update, delete)
 

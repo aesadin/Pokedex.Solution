@@ -10,18 +10,18 @@ using System.Threading.Tasks;
 
 namespace PokedexClient.Controllers
 {
-  public class PokeTypesController : Controllers
+  public class PokeTypesController : Controller
   {
     public IActionResult Index()
     {
       var allPokemon = Pokemon.GetPokemon();
-      return ViewModels(allPokemon);
+      return View(allPokemon);
     }
 
     public IActionResult Details(int id)
     {
       var pokemon = Pokemon.GetDetails(id);
-      return ViewModels(pokemon);
+      return View(pokemon);
     }
   }
 }

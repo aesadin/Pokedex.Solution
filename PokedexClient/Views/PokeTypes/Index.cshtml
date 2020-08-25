@@ -2,8 +2,8 @@
   Layout = "_Layout";
 }
 
-@using Pokedex.Models;
-@model List<Pokedex.Models.PokeType>;
+@using PokedexClient.Models;
+@model List<PokedexClient.Models.PokeType>;
 
 <h1>All PokeTypes</h1>
 <hr/>
@@ -13,5 +13,5 @@
 }
 @foreach(PokeType pokeType in Model)
 {
-  <li>@Html.ActionLink($"{pokeType.Name}", "Details", new { id = pokeType.PokeTypeId })</li>
+  <li>@Html.ActionLink($"{pokeType.PokeTypeName}", "Details", new { id = pokeType.PokeTypeId })</li>
 }

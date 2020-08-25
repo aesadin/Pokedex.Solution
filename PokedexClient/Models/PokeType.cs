@@ -20,7 +20,7 @@ namespace PokedexClient.Models
 
     public static List<PokeType> GetPokeTypes()
     {
-      var apiCallTask = ApiHelper.GetAll();
+      var apiCallTask = ApiHelper.GetAllPokeTypes();
       var result = apiCallTask.Result;
 
       JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
@@ -30,12 +30,13 @@ namespace PokedexClient.Models
     }
     public static PokeType GetDetails(int id)
     {
-      vArgIterator apiCallTask = ApiHelper.Get(id);
+      var apiCallTask = ApiHelper.GetPokeTypes(id);
       var result = apiCallTask.Result;
 
-      JObject jsonResponse = JsonConvert.DeserializeObject<PokeType>(jsonResponse.ToString());
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      PokeType pokeType = JsonConvert.DeserializeObject<PokeType>(jsonResponse.ToString());
 
-      return review;
+      return pokeType;
     }
   }
 }
