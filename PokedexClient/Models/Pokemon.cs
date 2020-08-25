@@ -32,6 +32,13 @@ namespace PokedexClient.Models
 
       JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
       List<Pokemon> pokemonList = JsonConvert.DeserializeObject<List<Pokemon>>(jsonResponse.ToString());
+
+      return pokemonList;
+    }
+
+    public static Pokemon GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
     }
   }
 }
