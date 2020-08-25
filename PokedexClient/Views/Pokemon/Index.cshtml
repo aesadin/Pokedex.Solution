@@ -1,3 +1,17 @@
 @{
   Layout = "_Layout";
 }
+
+@using Pokedex.Models;
+@model List<Pokedex.Models.Pokemon>;
+
+<h1>All Pokemon</h1>
+<hr/>
+@if(@Model.Count == 0)
+{
+  <h3>No Pokemon have been added yet!</h3>
+}
+@foreach(Pokemon pokemon in Model)
+{
+  <li>@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</li>
+}

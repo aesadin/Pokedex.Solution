@@ -1,3 +1,17 @@
 @{
   Layout = "_Layout";
 }
+
+@using Pokedex.Models;
+@model List<Pokedex.Models.PokeType>;
+
+<h1>All PokeTypes</h1>
+<hr/>
+@if(@Model.Count == 0)
+{
+  <h3>No PokeTypes have been added yet!</h3>
+}
+@foreach(PokeType pokeType in Model)
+{
+  <li>@Html.ActionLink($"{pokeType.Name}", "Details", new { id = pokeType.PokeTypeId })</li>
+}

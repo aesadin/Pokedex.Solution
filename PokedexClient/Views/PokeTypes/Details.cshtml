@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Pokedex.Models.PokeType
+
+<h1>@Html.DisplayNameFor(model => model.PokeTypeName): @Html.DisplayFor(model => model.PokeTypeName) -Type Details:</h1>   @*Ideally title should say (ex. "Fire-Type Details")*@
+
+<hr/>
+
+@if(@Model.Pokemon.Count == 0)
+{
+  <p>There are no pokemon associated with this poketype!</p>
+}
+else
+{
+  <h3>Pokemon of this type:</h3>
+  <ul>
+    @foreach (PokeType pokeType in Model.Pokemon)
+    {
+      <li>@join.Pokemon.Name</li>
+    }
+  </ul>
+}

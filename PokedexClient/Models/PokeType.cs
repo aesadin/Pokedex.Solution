@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.ComponentModel;
 
 namespace PokedexClient.Models
 {
@@ -13,6 +14,7 @@ namespace PokedexClient.Models
       this.Pokemon = new HashSet<Pokemon>();
     }
     public int PokeTypeId { get; set; }
+    [DisplayName("Type")]
     public string PokeTypeName { get; set; }
     public ICollection<Pokemon> Pokemon { get; set; }
 

@@ -10,6 +10,10 @@ namespace Pokedex.Models
 {
   public class User
   {
+    public User()
+    {
+      this.Pokemon = new HashSet<Pokemon>();
+    }
     public int UserId { get; set; }
     public string Name { get; set; }
     public ICollection<Pokemon> Pokemon { get; set; }

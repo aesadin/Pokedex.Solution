@@ -1,0 +1,10 @@
+body {
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav {
+  background-color: rgba(245, 245, 245, 0.75);
+  font-family: 'Arial';
+}
