@@ -1,14 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pokedex.Models;
-// using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+// using System.Collections.Generic.List;
 
 namespace Pokedex.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] 
     [ApiController]
     public class PokeTypesController : ControllerBase
     {
@@ -40,12 +41,12 @@ namespace Pokedex.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<PokeType>> Get(string pokeTypeName)
+        public ActionResult<IEnumerable<PokeType>> Get(string PokeTypeName)
         {
           var query = _db.PokeTypes.AsQueryable();
-          if (pokeTypeName != null)
+          if (PokeTypeName != null)
           {
-            query = query.Where(entry => entry.PokeTypeName == pokeTypeName);
+            query = query.Where(entry => entry.PokeTypeName == PokeTypeName);
           }
 
           return query.ToList();

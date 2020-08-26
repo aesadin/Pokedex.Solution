@@ -12,4 +12,4 @@ namespace Pokedex.Models
     public string PokeTypeName { get; set; }
     public ICollection<Pokemon> Pokemon { get; set; }
   }
-}
+} 

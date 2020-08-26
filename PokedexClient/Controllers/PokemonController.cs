@@ -17,11 +17,10 @@ namespace PokedexClient.Controllers
       var allPokemon = Pokemon.GetPokemon();
       return View(allPokemon);
     }
- 
     public IActionResult Details(int id)
     {
       var pokemon = Pokemon.GetDetails(id);
       return View(pokemon);
     }
   }
-}
+} 
