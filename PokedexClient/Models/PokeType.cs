@@ -17,7 +17,7 @@ namespace PokedexClient.Models
     [DisplayName("Type")]
     public string PokeTypeName { get; set; }
     public ICollection<Pokemon> Pokemon { get; set; }
-
+ 
     public static List<PokeType> GetPokeTypes()
     {
       var apiCallTask = ApiHelper.GetAllPokeTypesHelper();

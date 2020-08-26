@@ -8,9 +8,9 @@
 
 ## User Stories
 
-<!-- MVP: full crud functionality(GET for general users. POST, PUT, DESTROY for specific users), two classes (Pokemon and Type), seeded data for all 151 Pokemon, seeded data for all 13 Types, fully functional API, full ui, Identity authentication -->
+<!-- MVP: full crud functionality(GET for general users. POST, PUT, DESTROY for specific users), two classes (Pokemon and Type), seeded data for all 151 Pokemon, seeded data for all 13 Types, fully functional API, full ui -->
 
-<!-- Stretch goals: publish project, Silhouette guessing game, MyTeam creator, -->
+<!-- Stretch goals: publish project, Silhouette guessing game, MyTeam creator, Identity authentication -->
 
 * As a Pokemon Master, I need to be able to create a user profile, So that I can access my user specific information. (CREATE)
 

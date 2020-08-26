@@ -8,6 +8,7 @@ namespace PokedexClient.Models
 {
   public class Pokemon
   {
+    
     public int PokemonId { get; set; }
     public int PokeTypeId { get; set; }
     public string Species { get; set; }
@@ -38,6 +39,9 @@ namespace PokedexClient.Models
     public static Pokemon GetDetails(int id)
     {
       var apiCallTask = ApiHelper.GetPokemonHelper(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
       Pokemon pokemon = JsonConvert.DeserializeObject<Pokemon>(jsonResponse.ToString());
       return pokemon;
     }
