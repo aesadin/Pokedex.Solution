@@ -1,5 +1,5 @@
 body {
-  background-image: url("");
+  background-image: url("https://images.alphacoders.com/761/761506.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -7,4 +7,9 @@ body {
 .nav {
   background-color: rgba(245, 245, 245, 0.75);
   font-family: 'Arial';
+}
+
+h1  {
+  color: whitesmoke;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75)
 }

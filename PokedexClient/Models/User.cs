@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace PokedexClient.Models
 {
@@ -15,10 +16,10 @@ namespace PokedexClient.Models
 
     public static User GetDetails(int id)
     {
-      var apiCallTask = ApiHelper.Get(id);
+      var apiCallTask = ApiHelper.GetUsers(id);
       var result = apiCallTask.Result;
 
-      JObject jsonResponse = JsonConver.DeserializeObject<JObject>(result);
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
       User user = JsonConvert.DeserializeObject<User>(jsonResponse.ToString());
 
       return user;
@@ -26,7 +27,7 @@ namespace PokedexClient.Models
 
     public static void Post(User user)
     {
-      string jsonUser = JsonConver.SerializeObject(user);
+      string jsonUser = JsonConvert.SerializeObject(user);
       var apiCallTask = ApiHelper.Post(jsonUser);
     }
 

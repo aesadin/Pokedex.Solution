@@ -2,7 +2,8 @@
   Layout = "_Layout";
 }
 
-@model Pokedex.Models.PokeType
+@using PokedexClient.Models;
+@model PokedexClient.Models.PokeType
 
 <h1>@Html.DisplayNameFor(model => model.PokeTypeName): @Html.DisplayFor(model => model.PokeTypeName) -Type Details:</h1>   @*Ideally title should say (ex. "Fire-Type Details")*@
 
@@ -16,9 +17,9 @@ else
 {
   <h3>Pokemon of this type:</h3>
   <ul>
-    @foreach (PokeType pokeType in Model.Pokemon)
+    @foreach (Pokemon pokemon in @Model.Pokemon)
     {
-      <li>@join.Pokemon.Name</li>
+      <li>@pokemon.Species</li>
     }
   </ul>
 }
