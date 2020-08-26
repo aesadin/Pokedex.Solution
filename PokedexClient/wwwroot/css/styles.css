@@ -10,7 +10,7 @@ body {
 .nav {
   /* background-color: rgba(245, 245, 245, 0.75); */
   padding: 0;
-  font-family: 'Arial';
+  font-family: 'Yeseva One', cursive;
   text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75)
 }
 .card {
@@ -19,6 +19,8 @@ body {
   padding: 2%;
   background-color: rgba(245, 245, 245, 0.75);
   border-radius: 10px;
+  max-height: 100px;
+  overflow-y: scroll;
 }
 
 div#footer {
@@ -33,10 +35,11 @@ div#footer {
 }
 
 h1  {
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Slackey', cursive;
   color: rgb(218, 0, 0);
   text-shadow: 0px 1px 2px rgb(0, 0, 0)
 }
 li  {
   color: black;
 }
+

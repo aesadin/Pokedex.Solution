@@ -47,6 +47,7 @@ namespace Pokedex.Controllers
           if (PokeTypeName != null)
           {
             query = query.Where(entry => entry.PokeTypeName == PokeTypeName);
+            query = query.Where(entry => entry.PokeTypeName == PokeTypeName);
           }
 
           return query.ToList();

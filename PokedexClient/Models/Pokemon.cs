@@ -38,9 +38,6 @@ namespace PokedexClient.Models
     public static Pokemon GetDetails(int id)
     {
       var apiCallTask = ApiHelper.GetPokemonHelper(id);
-      var result = apiCallTask.Result;
-
-      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
       Pokemon pokemon = JsonConvert.DeserializeObject<Pokemon>(jsonResponse.ToString());
       return pokemon;
     }

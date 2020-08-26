@@ -91,8 +91,6 @@ namespace Pokedex.Controllers
             return query.ToList();
         }
 
-        //Pagination
-        [HttpGet ("page")]
         public ActionResult<Pokemon> GetPage([FromQuery] UrlQuery urlQuery)
         {
             var validUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
