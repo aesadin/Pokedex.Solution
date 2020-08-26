@@ -241,8 +241,8 @@ X Create Views for User (index, details, create, update, delete)
 
 Wednesday:
 
-- Troubleshoot the API
-- Check our views in the browser
-- Pokedex Styling for pokemon index
+X Troubleshoot the API
+X Check our views in the browser
+X Pokedex Styling for pokemon index
 - Build an image Carousel
 

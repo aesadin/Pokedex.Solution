@@ -6,7 +6,6 @@ body {
 /* https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3be21906-104d-44dc-88b9-bd4d0c332450/danm4kn-fad76ebf-31cf-4cdf-a862-95c2603a1a4d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvM2JlMjE5MDYtMTA0ZC00NGRjLTg4YjktYmQ0ZDBjMzMyNDUwXC9kYW5tNGtuLWZhZDc2ZWJmLTMxY2YtNGNkZi1hODYyLTk1YzI2MDNhMWE0ZC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.FUL3Kw32sWjxA51EM64zwCufx47DMChf9JPcKFdzEFU */
 
 .nav {
-  background-color: rgba(245, 245, 245, 0.45);
   padding: 0;
   font-family: 'Yeseva One', cursive;
   text-shadow: 1px 2px 3px #757575;
@@ -18,7 +17,7 @@ body {
   padding: 2%;
   background-color: rgba(245, 245, 245, 0.75);
   border-radius: 10px;
-  max-height: 650px;
+  max-height: 600px;
   overflow-y: scroll;
   box-shadow: 2px 4px 8px #757575;
 }
@@ -28,7 +27,6 @@ div#footer {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  /* background: rgba(245, 245, 245, 0.35); */
   padding: 0.1px;
   text-align: center;
   color: whitesmoke;
@@ -48,8 +46,12 @@ a:hover {
 }
 
 li  {
+  font-family: 'Freckle Face', cursive;
   color: black;
   text-decoration: none;
+}
+#name {
+  font-family: 'Freckle Face', cursive;
 }
 
 
