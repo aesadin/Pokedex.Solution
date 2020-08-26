@@ -6,11 +6,9 @@
 @model PokedexClient.Models.Pokemon
 
 <h1>@Html.DisplayFor(model => model.Species) 's stats</h1>
-<!-- <h2>Type: @ViewBag.pokeTypeBag</h2> -->
-<!-- <h3>@Html.DisplayFor(pokeType => pokeType.PokemonId)</h3> -->
+<h2>Type: @Html.DisplayFor(model => model.PokeTypeName)</h2>
 <hr/>
 <img src="@Model.ImageMain" alt="@Model.Species">
-<img src="@Model.ImageSprite" alt="@Model.Species">
 <h3>@Html.DisplayNameFor(model => model.PokemonId): @Html.DisplayFor(model => model.PokemonId)</h3><br>
 <h3>@Html.DisplayNameFor(model => model.Species): @Html.DisplayFor(model => model.Species)</h3><br>
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3><br>

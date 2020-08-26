@@ -41,12 +41,16 @@ namespace Pokedex.Controllers
         // GET api/pokemon
         // GET api/pokemon?q={Description: "The best pokemon"}
         [HttpGet]
-        public ActionResult<IEnumerable<Pokemon>> Get(string Species, string Description, double Weight, double Height, int Hp, int Attack, int Defense, int SpAtk, int SpDef, int Speed, string Ability)
+        public ActionResult<IEnumerable<Pokemon>> Get(string Species, string PokeTypeName, string Description, double Weight, double Height, int Hp, int Attack, int Defense, int SpAtk, int SpDef, int Speed, string Ability)
         {
             var query = _db.Pokemon.AsQueryable();
             if(Species != null)
             {
                 query = query.Where(entry => entry.Species == Species);
+            }
+            if(PokeTypeName != null)
+            {
+                query = query.Where(entry => entry.PokeTypeName == PokeTypeName);
             }
             if(Description != null)
             {

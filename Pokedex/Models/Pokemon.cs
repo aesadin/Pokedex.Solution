@@ -5,6 +5,7 @@ namespace Pokedex.Models
   {
     public int PokemonId { get; set; }
     public int PokeTypeId { get; set; }
+    public string PokeTypeName { get; set; }
     public string Species { get; set; }
     public string Description { get; set; }
     public double Weight { get; set; }
