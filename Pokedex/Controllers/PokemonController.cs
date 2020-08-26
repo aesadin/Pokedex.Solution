@@ -107,12 +107,12 @@ namespace Pokedex.Controllers
         [HttpGet ("page")]
         public ActionResult<Pokemon> GetPage([FromQuery] UrlQuery urlQuery)
         {
-            var valudUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
+            var validUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
             var pagedData = _db.Pokemon
                 .OrderBy(pokemon => pokemon.PokemonId)
-                .Skip((valueUrlQuery.PageNumber-1) * validUrlQuery.PageSize)
+                .Skip((validUrlQuery.PageNumber-1) * validUrlQuery.PageSize)
                 .Take(validUrlQuery.PageSize);
-            return Ok(pagesData);
+            return Ok(pagedData);
         }
     }
 }
