@@ -3,14 +3,18 @@ using System.ComponentModel.DataAnnotations;
 using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.ComponentModel;
 
 namespace PokedexClient.Models
 {
   public class Pokemon
   {
-    
+
+    [DisplayName("Pokedex Id #")]  
     public int PokemonId { get; set; }
     public int PokeTypeId { get; set; }
+    [DisplayName("Type")]
+
     public string PokeTypeName { get; set; }
     public string Species { get; set; }
     public string Description { get; set; }

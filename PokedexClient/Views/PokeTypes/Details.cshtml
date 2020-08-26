@@ -19,7 +19,7 @@ else
   <ul>
     @foreach (Pokemon pokemon in @Model.Pokemon)
     {
-      <li>@pokemon.Species</li>@* <li>@Html.ActionLink($"pokemon.Species", "Details", "Pokemon" new {id = @pokemon.PokemonId})</li> *@
+      <li>@Html.ActionLink($"{pokemon.Species}", "Details", "Pokemon", new {id = @pokemon.PokemonId})</li>
     }
   </ul>
 }

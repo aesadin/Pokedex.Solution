@@ -5,8 +5,9 @@
 @using PokedexClient.Models;
 @model PokedexClient.Models.Pokemon
 
-<h1>@Html.DisplayFor(model => model.Species) 's stats</h1>
-<h2>Type: @Html.DisplayFor(model => model.PokeTypeName)</h2>
+<h1>@Html.DisplayFor(model => model.Species)</h1>
+<h2>@Html.DisplayNameFor(model => model.PokeTypeName): @Html.DisplayFor(model => model.PokeTypeName)</h2>
+
 <hr/>
 <img src="@Model.ImageMain" alt="@Model.Species">
 <h3>@Html.DisplayNameFor(model => model.PokemonId): @Html.DisplayFor(model => model.PokemonId)</h3><br>
@@ -21,3 +22,4 @@
 <h3>@Html.DisplayNameFor(model => model.SpDef): @Html.DisplayFor(model => model.SpDef)</h3><br>
 <h3>@Html.DisplayNameFor(model => model.Speed): @Html.DisplayFor(model => model.Speed)</h3><br>
 <h3>@Html.DisplayNameFor(model => model.Ability): @Html.DisplayFor(model => model.Ability)</h3><br>
+ 
