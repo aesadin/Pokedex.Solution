@@ -5,18 +5,37 @@
 @using PokedexClient.Models;
 @model PokedexClient.Models.Pokemon
 
-<h1>#@Html.DisplayFor(model => model.PokemonId) @Html.DisplayFor(model => model.Species)</h1>
+<h1>#@Html.DisplayFor(model => model.PokemonId) @Html.DisplayFor(model => model.Species)</h1><br>
+@if(@Model.PokemonId >= 2 && @Model.PokemonId != 151)
+{
+  <div class="next-button">
+    @Html.ActionLink("<", "Details", new { id = @Model.PokemonId - 1}) | @Html.ActionLink(">", "Details", new { id = @Model.PokemonId + 1})
+  </div>
+} 
+else if (@Model.PokemonId == 1)
+{
+  <div class="next-button">
+  @Html.ActionLink(">", "Details", new { id = @Model.PokemonId + 1})
+  </div>
+} 
+else
+{
+  <div class="next-button">
+  @Html.ActionLink("<", "Details", new { id = @Model.PokemonId - 1})
+  </div>
+}
 <hr/>
 <img src="@Model.ImageMain" alt="@Model.Species">
-
+<p><br></p>
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
       <h1>Description</h1>
       <p>@Html.DisplayFor(model => model.Description)</p>
     </div>
-
-<div class="col-sm-6">
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5">
   <h1>Info</h1>
   <p>@Html.DisplayNameFor(model => model.Species): @Html.DisplayFor(model => model.Species)</p>
   <p>@Html.DisplayNameFor(model => model.PokeTypeName): @Html.DisplayFor(model => model.PokeTypeName)</p>
@@ -45,3 +64,5 @@
 </div>
 </div>
 </div>
+
+

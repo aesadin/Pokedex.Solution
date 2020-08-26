@@ -7,7 +7,7 @@ body {
 
 .nav {
   padding: 0;
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Freckle Face', cursive;
   text-shadow: 1px 2px 3px #757575;
 }
 
@@ -38,9 +38,14 @@ h1  {
   text-shadow: 1px 2px 3px #757575;
 }
 
+.header {
+  font-size: 2rem;
+}
+
 a {
   text-decoration: none;
 }
+
 a:hover {
   color: red;
 }
@@ -50,9 +55,12 @@ li  {
   color: black;
   text-decoration: none;
 }
+
 #name {
   font-family: 'Freckle Face', cursive;
 }
 
-
+.next-button  {
+  text-align: center;
+}
 
