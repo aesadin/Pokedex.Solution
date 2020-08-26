@@ -18,13 +18,16 @@ namespace Pokedex.Controllers
         {
             _db = db;
         }
-
+        
+        //I think this one needs to go the way of the bulbasaurs
         // GET api/pokemon
-        [HttpGet]
-        public ActionResult<IEnumerable<Pokemon>> Get()
-        {
-            return _db.Pokemon.ToList();
-        }
+        // [HttpGet]
+        // public ActionResult<IEnumerable<Pokemon>> Get()
+        // {
+        //     return _db.Pokemon.ToList();
+        // }
+
+        
 
         // GET api/pokemon/5
         [HttpGet("{id}")]
@@ -32,26 +35,11 @@ namespace Pokedex.Controllers
         {
             return _db.Pokemon.FirstOrDefault(entry => entry.PokemonId == id);        
         }
-        // // POST api/pokemon
-        // [HttpPost]
-        // public void Post([FromBody] string value)
-        // {
-        // }
-
-        // // PUT api/pokemon/5
-        // [HttpPut("{id}")]
-        // public void Put(int id, [FromBody] string value)
-        // {
-        // }
-
-        // // DELETE api/pokemon/5
-        // [HttpDelete("{id}")]
-        // public void Delete(int id)
-        // {
-        // }
 
 
         //Querying
+        // GET api/pokemon
+        // GET api/pokemon?q={Description: "The best pokemon"}
         [HttpGet]
         public ActionResult<IEnumerable<Pokemon>> Get(string Species, string Description, double Weight, double Height, int Hp, int Attack, int Defense, int SpAtk, int SpDef, int Speed, string Ability)
         {
@@ -64,35 +52,35 @@ namespace Pokedex.Controllers
             {
                 query = query.Where(entry => entry.Description == Description);
             }
-            if(Weight != null)
+            if(Weight != 0)
             {
                 query = query.Where(entry => entry.Weight == Weight);
             }
-            if(Height != null)
+            if(Height != 0)
             {
                 query = query.Where(entry => entry.Height == Height);
             }
-            if(Hp != null)
+            if(Hp != 0)
             {
                 query = query.Where(entry => entry.Hp == Hp);
             }
-            if(Attack != null)
+            if(Attack != 0)
             {
                 query = query.Where(entry => entry.Attack == Attack);
             }
-            if(Defense != null)
+            if(Defense != 0)
             {
                 query = query.Where(entry => entry.Defense == Defense);
             }
-            if(SpAtk != null)
+            if(SpAtk != 0)
             {
                 query = query.Where(entry => entry.SpAtk == SpAtk);
             }
-            if(SpDef != null)
+            if(SpDef != 0)
             {
                 query = query.Where(entry => entry.SpDef == SpDef);
             }
-            if(Speed != null)
+            if(Speed != 0)
             {
                 query = query.Where(entry => entry.Speed == Speed);
             }

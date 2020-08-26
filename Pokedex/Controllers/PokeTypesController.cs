@@ -21,13 +21,13 @@ namespace Pokedex.Controllers
 
         // GET api/poketype
 
-        [HttpGet]
-        public ActionResult<IEnumerable<PokeType>> Get()
-        {
-          var allInfo = _db.PokeTypes
-          .Include(pokeType => pokeType.Pokemon);
-          return allInfo.ToList();
-        }
+        // [HttpGet]
+        // public ActionResult<IEnumerable<PokeType>> Get()
+        // {
+        //   var allInfo = _db.PokeTypes
+        //   .Include(pokeType => pokeType.Pokemon);
+        //   return allInfo.ToList();
+        // }
 
         // GET api/poketype/5
         [HttpGet("{id}")]

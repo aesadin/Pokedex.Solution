@@ -5,7 +5,7 @@ namespace PokedexClient.Models
 {
   class ApiHelper
   {
-    public static async Task<string> GetAllPokemon()
+    public static async Task<string> GetAllHelper()
     {
       RestClient client = new RestClient("http://localhost:5000/api");
       RestRequest request = new RestRequest($"pokemon", Method.GET);
@@ -13,7 +13,7 @@ namespace PokedexClient.Models
       return response.Content;
     }
 
-    public static async Task<string> GetPokemon(int id)
+    public static async Task<string> GetPokemonHelper(int id)
     {
       RestClient client = new RestClient("http:localhost:5000/api");
       RestRequest request = new RestRequest($"pokemon/{id}", Method.GET);
