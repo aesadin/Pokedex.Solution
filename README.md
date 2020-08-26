@@ -95,14 +95,14 @@ X Create PokeTypes Model
 X Create User Model
 X Create PokemonTypes Model
 X Create UserPokemon Model
-- Make GET PokemonController
-- Make GET PokeTypesController
+X Make GET PokemonController
+X Make GET PokeTypesController
 X Make get, post, put and delete for UsersController
 
 Client
 X Create UsersController
 x Create Model for ApiHelper
-- Create views folders for Pokemon, Type and User(X)
+X Create views folders for Pokemon, Type and User(X)
 
 
 - Create Home view and controller
@@ -113,4 +113,12 @@ X Create Login ViewModel
     *still need to fix up details
 X Create Views for Type (index, details)
 X Create Views for User (index, details, create, update, delete)
+
+
+Wednesday:
+
+- Troubleshoot the API
+- Check our views in the browser
+- Pokedex Styling for pokemon index
+- Build an image Carousel
 
