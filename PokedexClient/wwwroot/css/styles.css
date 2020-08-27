@@ -3,7 +3,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3be21906-104d-44dc-88b9-bd4d0c332450/danm4kn-fad76ebf-31cf-4cdf-a862-95c2603a1a4d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvM2JlMjE5MDYtMTA0ZC00NGRjLTg4YjktYmQ0ZDBjMzMyNDUwXC9kYW5tNGtuLWZhZDc2ZWJmLTMxY2YtNGNkZi1hODYyLTk1YzI2MDNhMWE0ZC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.FUL3Kw32sWjxA51EM64zwCufx47DMChf9JPcKFdzEFU */
 
 .nav {
   padding: 0;
@@ -17,7 +16,7 @@ body {
   padding: 2%;
   background-color: rgba(245, 245, 245, 0.85);
   border-radius: 10px;
-  box-shadow: 2px 4px 5px 5.5px #605f8d;
+  box-shadow: 2px 4px 4.5px 5px rgb(51, 51, 51);
   max-height: 640px;
   overflow-y: scroll;
 }
@@ -28,8 +27,12 @@ div#footer {
   left: 0px;
   width: 100%;
   padding: 0.1px;
-  text-align: center;
+  margin-left: 3px;
+  text-align: left;
   color: whitesmoke;
+}
+h6  {
+  font-size: 10px;
 }
 
 h1  {
@@ -67,8 +70,5 @@ li  {
   text-align: center;
   font-family: 'Slackey', cursive;
   font-size: 1rem;
-}
-.next-button:link  {
-  text-decoration: none;
 }
 
