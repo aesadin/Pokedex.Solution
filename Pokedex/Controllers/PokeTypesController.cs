@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pokedex.Models;
 using Microsoft.EntityFrameworkCore;
-// using System.Collections.Generic.List;
 
 namespace Pokedex.Controllers
 {
@@ -19,16 +18,6 @@ namespace Pokedex.Controllers
         {
           _db = db;
         }
-
-        // GET api/poketype
-
-        // [HttpGet]
-        // public ActionResult<IEnumerable<PokeType>> Get()
-        // {
-        //   var allInfo = _db.PokeTypes
-        //   .Include(pokeType => pokeType.Pokemon);
-        //   return allInfo.ToList();
-        // }
 
         // GET api/poketype/5
         [HttpGet("{id}")]

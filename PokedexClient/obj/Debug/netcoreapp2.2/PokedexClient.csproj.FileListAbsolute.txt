@@ -14,10 +14,6 @@
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.TagHelpers.input.cache
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.TagHelpers.output.cache
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.RazorCoreGenerate.cache
-/Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Account/Index.g.cshtml.cs
-/Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.g.cshtml.cs
-/Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Account/Register.g.cshtml.cs
-/Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Home/Details.g.cshtml.cs
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Pokemon/Details.g.cshtml.cs
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Pokemon/Index.g.cshtml.cs
@@ -31,3 +27,4 @@
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.dll
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.pdb
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.csproj.CopyComplete
+/Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Splashpage.g.cshtml.cs

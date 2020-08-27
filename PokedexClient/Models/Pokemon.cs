@@ -3,13 +3,18 @@ using System.ComponentModel.DataAnnotations;
 using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.ComponentModel;
 
 namespace PokedexClient.Models
 {
   public class Pokemon
   {
+
+    [DisplayName("Pokedex Id #")]  
     public int PokemonId { get; set; }
     public int PokeTypeId { get; set; }
+    [DisplayName("Type")]
+    public string PokeTypeName { get; set; }
     public string Species { get; set; }
     public string Description { get; set; }
     public double Weight { get; set; }
@@ -44,22 +49,5 @@ namespace PokedexClient.Models
       Pokemon pokemon = JsonConvert.DeserializeObject<Pokemon>(jsonResponse.ToString());
       return pokemon;
     }
-
-    // public static void Post(Pokemon pokemon)
-    // {
-    //   string jsonPokemon = JsoneConvert.SerializeObject(pokemon);
-    //   var apiCallTask = ApiHelper.Post(jsonPokemon);
-    // }
-    
-    // public static void Put(Pokemon pokemon)
-    // {
-    //   string jsonPokemon = JsonConvert.SerializeObject(pokemon);
-    //   var apiCallTask = ApiHelper.Put(pokemon.PokemonId, jsonPokemon);
-    // }
-
-    // public static void Delete(int id)
-    // {
-    //   var apiCallTask = ApiHelper.Delete(id);
-    // }
   }
 }

@@ -18,16 +18,6 @@ namespace Pokedex.Controllers
         {
             _db = db;
         }
-        
-        //I think this one needs to go the way of the bulbasaurs
-        // GET api/pokemon
-        // [HttpGet]
-        // public ActionResult<IEnumerable<Pokemon>> Get()
-        // {
-        //     return _db.Pokemon.ToList();
-        // }
-
-        
 
         // GET api/pokemon/5
         [HttpGet("{id}")]
@@ -41,12 +31,16 @@ namespace Pokedex.Controllers
         // GET api/pokemon
         // GET api/pokemon?q={Description: "The best pokemon"}
         [HttpGet]
-        public ActionResult<IEnumerable<Pokemon>> Get(string Species, string Description, double Weight, double Height, int Hp, int Attack, int Defense, int SpAtk, int SpDef, int Speed, string Ability)
+        public ActionResult<IEnumerable<Pokemon>> Get(string Species, string PokeTypeName, string Description, double Weight, double Height, int Hp, int Attack, int Defense, int SpAtk, int SpDef, int Speed, string Ability)
         {
             var query = _db.Pokemon.AsQueryable();
             if(Species != null)
             {
                 query = query.Where(entry => entry.Species == Species);
+            }
+            if(PokeTypeName != null)
+            {
+                query = query.Where(entry => entry.PokeTypeName == PokeTypeName);
             }
             if(Description != null)
             {
@@ -91,8 +85,6 @@ namespace Pokedex.Controllers
             return query.ToList();
         }
 
-        //Pagination
-        [HttpGet ("page")]
         public ActionResult<Pokemon> GetPage([FromQuery] UrlQuery urlQuery)
         {
             var validUrlQuery = new UrlQuery(urlQuery.PageNumber, urlQuery.PageSize);
