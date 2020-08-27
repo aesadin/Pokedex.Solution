@@ -2,23 +2,67 @@
   Layout = "_Layout";
 }
 
+@using PokedexClient.Models;
 @model PokedexClient.Models.Pokemon
 
-<h1>@Html.DisplayFor(model => model.Species) 's stats</h1>
-<h2>Type: @ViewBag.pokeTypeBag</h2>
+<h1>#@Html.DisplayFor(model => model.PokemonId) @Html.DisplayFor(model => model.Species)</h1><br>
+@if(@Model.PokemonId >= 2 && @Model.PokemonId != 151)
+{
+  <div class="next-button">
+    @Html.ActionLink("<", "Details", new { id = @Model.PokemonId - 1}) | @Html.ActionLink(">", "Details", new { id = @Model.PokemonId + 1})
+  </div>
+} 
+else if (@Model.PokemonId == 1)
+{
+  <div class="next-button">
+  @Html.ActionLink(">", "Details", new { id = @Model.PokemonId + 1})
+  </div>
+} 
+else
+{
+  <div class="next-button">
+  @Html.ActionLink("<", "Details", new { id = @Model.PokemonId - 1})
+  </div>
+}
 <hr/>
-<img src="@pokemon.ImageMain" alt="@pokemon.Species">
-<img src="@pokemon.ImageSprite" alt="@pokemon.Species">
-<img src="@pokemon.ImageSilhouette" alt="@pokemon.Species">
-<h3>@Html.DisplayNameFor(model => model.PokemonId): @Html.DisplayFor(model => model.PokemonId)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Species): @Html.DisplayFor(model => model.Species)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Weight): @Html.DisplayFor(model => model.Weight)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Height): @Html.DisplayFor(model => model.Height)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Hp): @Html.DisplayFor(model => model.Hp)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Attack): @Html.DisplayFor(model => model.Attack)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Defense): @Html.DisplayFor(model => model.Defense)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.SpAtk): @Html.DisplayFor(model => model.SpAtk)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.SpDef): @Html.DisplayFor(model => model.SpDef)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Speed): @Html.DisplayFor(model => model.Speed)</h3><br>
-<h3>@Html.DisplayNameFor(model => model.Ability): @Html.DisplayFor(model => model.Ability)</h3><br>
+<img src="@Model.ImageMain" alt="@Model.Species">
+<p><br></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Description</h1>
+      <p>@Html.DisplayFor(model => model.Description)</p>
+    </div>
+<div class="col-sm-1">
+</div>
+<div class="col-sm-5">
+  <h1>Info</h1>
+  <p>@Html.DisplayNameFor(model => model.Species): @Html.DisplayFor(model => model.Species)</p>
+  <p>@Html.DisplayNameFor(model => model.PokeTypeName): @Html.DisplayFor(model => model.PokeTypeName)</p>
+  <p>@Html.DisplayNameFor(model => model.Height): @Html.DisplayFor(model => model.Height)</p>
+  <p>@Html.DisplayNameFor(model => model.Weight): @Html.DisplayFor(model => model.Weight)</p>
+  <p>@Html.DisplayNameFor(model => model.Ability): @Html.DisplayFor(model => model.Ability)</p>
+</div>
+
+<div class="col-sm-6">
+<h1>Stats</h1>
+
+<p>@Html.DisplayNameFor(model => model.Speed): @Html.DisplayFor(model => model.Speed)</p>
+
+<p>@Html.DisplayNameFor(model => model.SpDef): @Html.DisplayFor(model => model.SpDef)</p>
+
+<p>@Html.DisplayNameFor(model => model.SpAtk): @Html.DisplayFor(model => model.SpAtk)</p>
+
+<p>@Html.DisplayNameFor(model => model.Defense): @Html.DisplayFor(model => model.Defense)</p>
+
+<p>@Html.DisplayNameFor(model => model.Hp): @Html.DisplayFor(model => model.Hp)</p>
+
+<p>@Html.DisplayNameFor(model => model.Attack): @Html.DisplayFor(model => model.Attack)</p>
+
+
+
+</div>
+</div>
+</div>
+
+

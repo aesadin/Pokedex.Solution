@@ -17,10 +17,10 @@ namespace PokedexClient.Models
     [DisplayName("Type")]
     public string PokeTypeName { get; set; }
     public ICollection<Pokemon> Pokemon { get; set; }
-
+ 
     public static List<PokeType> GetPokeTypes()
     {
-      var apiCallTask = ApiHelper.GetAllPokeTypes();
+      var apiCallTask = ApiHelper.GetAllPokeTypesHelper();
       var result = apiCallTask.Result;
 
       JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
@@ -30,7 +30,7 @@ namespace PokedexClient.Models
     }
     public static PokeType GetDetails(int id)
     {
-      var apiCallTask = ApiHelper.GetPokeTypes(id);
+      var apiCallTask = ApiHelper.GetPokeTypesHelper(id);
       var result = apiCallTask.Result;
 
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);

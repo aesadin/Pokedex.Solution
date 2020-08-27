@@ -1,8 +1,8 @@
+using System;
 using PokedexClient.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -14,14 +14,14 @@ namespace PokedexClient.Controllers
   {
     public IActionResult Index()
     {
-      var allPokemon = Pokemon.GetPokemon();
-      return View(allPokemon);
+      List<PokeType> allPokeTypes = PokeType.GetPokeTypes();
+      return View(allPokeTypes);
     }
 
     public IActionResult Details(int id)
     {
-      var pokemon = Pokemon.GetDetails(id);
-      return View(pokemon);
+      PokeType pokeTypes = PokeType.GetDetails(id);
+      return View(pokeTypes);
     }
   }
 }

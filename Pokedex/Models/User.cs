@@ -11,7 +11,7 @@ namespace Pokedex.Models
   public class User
   {
     public User()
-    {
+    { 
       this.Pokemon = new HashSet<UserPokemon>();
     }
     public int UserId { get; set; }

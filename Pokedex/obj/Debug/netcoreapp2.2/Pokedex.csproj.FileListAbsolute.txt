@@ -1,0 +1,14 @@
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/bin/Debug/netcoreapp2.2/Pokedex.deps.json
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/bin/Debug/netcoreapp2.2/Pokedex.runtimeconfig.json
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/bin/Debug/netcoreapp2.2/Pokedex.runtimeconfig.dev.json
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/bin/Debug/netcoreapp2.2/Pokedex.dll
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/bin/Debug/netcoreapp2.2/Pokedex.pdb
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.csprojAssemblyReference.cache
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.csproj.CoreCompileInputs.cache
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.RazorAssemblyInfo.cache
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.RazorAssemblyInfo.cs
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.AssemblyInfoInputs.cache
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.AssemblyInfo.cs
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.RazorTargetAssemblyInfo.cache
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.dll
+/Users/Henager/Desktop/Pokedex.Solution/Pokedex/obj/Debug/netcoreapp2.2/Pokedex.pdb

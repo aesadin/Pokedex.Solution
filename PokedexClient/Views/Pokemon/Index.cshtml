@@ -13,5 +13,10 @@
 }
 @foreach(Pokemon pokemon in Model)
 {
-  <li>@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</li>
-}
+  <P><img src="@pokemon.ImageSprite" alt="@pokemon.Species"></p>
+  <P id="name">@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</p>
+} 
+
+
+
+

@@ -18,7 +18,7 @@ namespace Pokedex.Controllers
     {
       _db = db;
     }
-
+ 
     // GET api/users
     [HttpGet]
     public ActionResult<IEnumerable<User>> Get()

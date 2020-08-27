@@ -1,45 +1,45 @@
-using System.Collections.Generic;
-using System;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
+// using System.Collections.Generic;
+// using System;
+// using Newtonsoft.Json;
+// using Newtonsoft.Json.Linq;
+// using System.ComponentModel.DataAnnotations;
+// using Microsoft.AspNetCore.Identity;
+// using System.Security.Claims;
 
-namespace PokedexClient.Models
-{
-  public class User : IdentityUser
-  {
-    public int UserId { get; set; }
-    public string Name { get; set; }
-    public ICollection<Pokemon> Pokemon { get; set; }
+// namespace PokedexClient.Models
+// {
+//   public class User : IdentityUser
+//   {
+//     public int UserId { get; set; }
+//     public string Name { get; set; }
+//     public ICollection<Pokemon> Pokemon { get; set; }
 
-    public static User GetDetails(int id)
-    {
-      var apiCallTask = ApiHelper.GetUsers(id);
-      var result = apiCallTask.Result;
+//     public static User GetDetails(int id)
+//     {
+//       var apiCallTask = ApiHelper.GetUsers(id);
+//       var result = apiCallTask.Result;
 
-      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      User user = JsonConvert.DeserializeObject<User>(jsonResponse.ToString());
+//       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+//       User user = JsonConvert.DeserializeObject<User>(jsonResponse.ToString());
 
-      return user;
-    }
+//       return user;
+//     }
 
-    public static void Post(User user)
-    {
-      string jsonUser = JsonConvert.SerializeObject(user);
-      var apiCallTask = ApiHelper.Post(jsonUser);
-    }
+//     public static void Post(User user)
+//     {
+//       string jsonUser = JsonConvert.SerializeObject(user);
+//       var apiCallTask = ApiHelper.Post(jsonUser);
+//     }
 
-    public static void Put(User user)
-    {
-      string jsonUser = JsonConvert.SerializeObject(user);
-      var apiCallTask = ApiHelper.Put(user.UserId, jsonUser);
-    }
+//     public static void Put(User user)
+//     {
+//       string jsonUser = JsonConvert.SerializeObject(user);
+//       var apiCallTask = ApiHelper.Put(user.UserId, jsonUser);
+//     }
 
-    public static void Delete(int id)
-    {
-      var apiCallTask = ApiHelper.Delete(id);
-    }
-  }
-}
+//     public static void Delete(int id)
+//     {
+//       var apiCallTask = ApiHelper.Delete(id);
+//     }
+//   }
+// }
