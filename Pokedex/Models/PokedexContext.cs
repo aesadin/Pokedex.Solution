@@ -10,6 +10,7 @@ namespace Pokedex.Models
     public DbSet<User> Users { get; set; }
     public DbSet<Pokemon> Pokemon { get; set; }
     public DbSet<PokeType> PokeTypes { get; set; }
+    public DbSet<UserPokemon> UserPokemon { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

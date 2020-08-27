@@ -58,5 +58,40 @@ namespace Pokedex.Controllers
       _db.Users.Remove(userToDelete);
       _db.SaveChanges();
     }
+    
+    // [HttpGet("{id}/pokemon")]
+    // public ActionResult IEnumerable<UserPokemon>(int id)
+    // {
+      
+    //   return _db.UserPokemon.Where(join => join.UserId = id)
+
+      
+    // }
+
+    
+    // [HttpDelete("{id}/pokemon/{id}")]
+    // public ActionResult DeletePokemon(int id, int joinId)
+    // {
+    //   var thisUser = _db.Users
+    //   .Include(user => user.Pokemon);
+      
+
+
+    //   var joinEntry = _db.UserPokemon.FirstOrDefault(entry => entry.UserPokemonId == joinId);
+    //   _db.UserPokemon.Remove(joinEntry);
+    //   _db.SaveChanges(); 
+    //   // return (?)
+    // }
+
+
+    // [HttpDelete("{id}/pokemon/{id}")]
+    // public ActionResult DeletePokemon(int userId, int pokemonId)
+    // {
+    //   var joinEntry = _db.UserPokemon.Where(join => join.Users == userId && join.Pokemon == pokemonId);
+    //   _db.UserPokemon.Remove(joinEntry);
+    //   _db.SaveChanges(); 
+    //   // return (?)
+    // }
+
   }
 }

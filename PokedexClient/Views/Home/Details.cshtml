@@ -1,0 +1,21 @@
+@*
+@{
+  Layout = "_Layout";
+}
+
+@using Pokedex.Models;
+
+<h1>All Pokemon and all PokeTypes</h1>
+<hr/>
+<h3>Types:</h3>
+@foreach(PokeType poketype in ViewBag.allPokeTypes)
+{
+  <li>@Html.ActionLink($"{pokeType.PokeTypeName}", "Details", "PokeTypes", new { id = pokeType.PokeTypeId})</li>
+}
+<br>
+<h3>Pokemon:</h3>
+@foreach(Pokemon poketype in ViewBag.allPokemons)
+{
+  <li>@Html.ActionLink($"{pokemon.PokemonName}", "Details", "Pokemon", new { id = pokemon.PokemonId})</li>
+}
+*@

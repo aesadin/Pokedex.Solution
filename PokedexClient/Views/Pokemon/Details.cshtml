@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PokedexClient.Models.Pokemon
+
+<h1>@Html.DisplayFor(model => model.Species) 's stats</h1>
+<h2>Type: @ViewBag.pokeTypeBag</h2>
+<hr/>
+<img src="@pokemon.ImageMain" alt="@pokemon.Species">
+<img src="@pokemon.ImageSprite" alt="@pokemon.Species">
+<img src="@pokemon.ImageSilhouette" alt="@pokemon.Species">
+<h3>@Html.DisplayNameFor(model => model.PokemonId): @Html.DisplayFor(model => model.PokemonId)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Species): @Html.DisplayFor(model => model.Species)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Weight): @Html.DisplayFor(model => model.Weight)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Height): @Html.DisplayFor(model => model.Height)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Hp): @Html.DisplayFor(model => model.Hp)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Attack): @Html.DisplayFor(model => model.Attack)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Defense): @Html.DisplayFor(model => model.Defense)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.SpAtk): @Html.DisplayFor(model => model.SpAtk)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.SpDef): @Html.DisplayFor(model => model.SpDef)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Speed): @Html.DisplayFor(model => model.Speed)</h3><br>
+<h3>@Html.DisplayNameFor(model => model.Ability): @Html.DisplayFor(model => model.Ability)</h3><br>
