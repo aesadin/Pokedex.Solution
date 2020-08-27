@@ -1,18 +1,15 @@
 @{
-  Layout = "_Layout";
+  Layout = "_Splashpage";
 }
-
-<div class="homePage">
-<h1>Pokedex</h1><br>
-<hr>
-@if (User.Identity.IsAuthenticated)
-{
-  <p>@Html.ActionLink("View account", "Index", "Account")</p>
-  <p>@Html.ActionLink("See all Pokemon", "Index", "Pokemon", new {@class="link"})</p>
-  <p>@Html.ActionLink("See all Pokemon Types", "Index", "PokeTypes", new {@class="link"})</p>
-}
-else
-{
-  <p>@Html.ActionLink("Sign in/Sign up", "Index", "Account")</p>
-}
+<div class="row">
+  <div class="col-sm-4">
+    <div>
+    <br><br><br><br>
+    <h1 id="homePage">Pokédex</h1>
+    <div>
+  </div>
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4">
+  </div>
 </div>

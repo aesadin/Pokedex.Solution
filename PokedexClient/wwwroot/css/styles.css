@@ -1,25 +1,42 @@
-body {
+.layout {
   background-image: url("https://images.alphacoders.com/761/761506.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3be21906-104d-44dc-88b9-bd4d0c332450/danm4kn-fad76ebf-31cf-4cdf-a862-95c2603a1a4d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvM2JlMjE5MDYtMTA0ZC00NGRjLTg4YjktYmQ0ZDBjMzMyNDUwXC9kYW5tNGtuLWZhZDc2ZWJmLTMxY2YtNGNkZi1hODYyLTk1YzI2MDNhMWE0ZC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.FUL3Kw32sWjxA51EM64zwCufx47DMChf9JPcKFdzEFU */
+
+.splashPage {
+  background-image: url("https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/pokedex-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .nav {
   padding: 0;
   font-family: 'Freckle Face', cursive;
   text-shadow: 1px 2px 3px #757575;
+  font-size: 1.5rem;
 }
 
 .card {
-  margin-top: 3%;
+  margin-top: 1.5%;
   margin-bottom: 3%;
   padding: 2%;
-  background-color: rgba(245, 245, 245, 0.75);
+  background-color: rgba(245, 245, 245, 0.80);
   border-radius: 10px;
-  max-height: 600px;
+  box-shadow: 2px 4px 4.5px 5px rgb(51, 51, 51);
+  max-height: 640px;
   overflow-y: scroll;
-  box-shadow: 2px 4px 8px #757575;
+  -ms-overlflow-style: none;
+}
+.card::-webkit-scrollbar {
+  display: none;
+}
+#splash {
+  border-radius: 5%
+}
+#homePage {
+  font-size: 4.5rem;
+  text-shadow: 2px 3px 5px #000000;
 }
 
 div#footer {
@@ -28,24 +45,39 @@ div#footer {
   left: 0px;
   width: 100%;
   padding: 0.1px;
-  text-align: center;
+  margin-left: 3px;
+  text-align: left;
   color: whitesmoke;
 }
 
 h1  {
   font-family: 'Slackey', cursive;
+  font-size: 3rem;
   color: rgb(218, 0, 0);
-  text-shadow: 1px 2px 3px #757575;
+  text-shadow: 2px 3px 5px #757575;
 }
 
 .header {
   font-size: 2rem;
+  text-decoration: overline;
+}
+
+h3  {
+  font-family: 'Freckle Face', cursive;
+}
+
+h6  {
+  font-size: 10px;
+}
+
+p {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
 }
 
 a {
   text-decoration: none;
 }
-
 a:hover {
   color: red;
 }
@@ -62,5 +94,7 @@ li  {
 
 .next-button  {
   text-align: center;
+  font-family: 'Slackey', cursive;
+  font-size: 1rem;
 }
 
