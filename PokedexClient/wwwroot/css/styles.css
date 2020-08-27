@@ -1,5 +1,11 @@
-body {
+.layout {
   background-image: url("https://images.alphacoders.com/761/761506.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.splashPage {
+  background-image: url("https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/pokedex-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -26,7 +32,11 @@ body {
   display: none;
 }
 #splash {
-  border-radius: 10%
+  border-radius: 5%
+}
+#homePage {
+  font-size: 4.5rem;
+  text-shadow: 2px 3px 5px #000000;
 }
 
 div#footer {
@@ -42,9 +52,11 @@ div#footer {
 
 h1  {
   font-family: 'Slackey', cursive;
+  font-size: 3rem;
   color: rgb(218, 0, 0);
-  text-shadow: 1px 2px 3px #757575;
+  text-shadow: 2px 3px 5px #757575;
 }
+
 .header {
   font-size: 2rem;
   text-decoration: overline;

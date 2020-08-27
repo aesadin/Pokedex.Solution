@@ -27,3 +27,4 @@
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.dll
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.pdb
 /Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/PokedexClient.csproj.CopyComplete
+/Users/Henager/Desktop/Pokedex.Solution/PokedexClient/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Splashpage.g.cshtml.cs
