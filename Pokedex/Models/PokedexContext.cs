@@ -7,10 +7,8 @@ namespace Pokedex.Models
     public PokedexContext(DbContextOptions<PokedexContext> options) : base(options)
     {
     }
-    public DbSet<User> Users { get; set; }
     public DbSet<Pokemon> Pokemon { get; set; }
     public DbSet<PokeType> PokeTypes { get; set; }
-    public DbSet<UserPokemon> UserPokemon { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

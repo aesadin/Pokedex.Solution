@@ -18,16 +18,6 @@ namespace Pokedex.Controllers
         {
             _db = db;
         }
-        
-        //I think this one needs to go the way of the bulbasaurs
-        // GET api/pokemon
-        // [HttpGet]
-        // public ActionResult<IEnumerable<Pokemon>> Get()
-        // {
-        //     return _db.Pokemon.ToList();
-        // }
-
-        
 
         // GET api/pokemon/5
         [HttpGet("{id}")]

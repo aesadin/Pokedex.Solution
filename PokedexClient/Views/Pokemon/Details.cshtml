@@ -5,25 +5,28 @@
 @using PokedexClient.Models;
 @model PokedexClient.Models.Pokemon
 
-<h1>#@Html.DisplayFor(model => model.PokemonId) @Html.DisplayFor(model => model.Species)</h1><br>
+<h1>#@Html.DisplayFor(model => model.PokemonId) @Html.DisplayFor(model => model.Species)</h1>
+
 @if(@Model.PokemonId >= 2 && @Model.PokemonId != 151)
 {
   <div class="next-button">
-    @Html.ActionLink("<", "Details", new { id = @Model.PokemonId - 1}) | @Html.ActionLink(">", "Details", new { id = @Model.PokemonId + 1})
+    @Html.ActionLink("◀︎", "Details", new { id = @Model.PokemonId - 1})  @Html.ActionLink("▶︎", "Details", new { id = @Model.PokemonId + 1})
+  </div>
+} 
+else if (@Model.PokemonId == 151)
+{
+  <div class="next-button">
+    @Html.ActionLink("◀︎", "Details", new { id = @Model.PokemonId - 1})  @Html.ActionLink("▶︎", "Details", new { id = @Model.PokemonId -150})
   </div>
 } 
 else if (@Model.PokemonId == 1)
 {
   <div class="next-button">
-  @Html.ActionLink(">", "Details", new { id = @Model.PokemonId + 1})
+    @Html.ActionLink("◀︎", "Details", new { id = @Model.PokemonId +150})  @Html.ActionLink("▶︎", "Details", new { id = @Model.PokemonId +1})
   </div>
 } 
-else
-{
-  <div class="next-button">
-  @Html.ActionLink("<", "Details", new { id = @Model.PokemonId - 1})
-  </div>
-}
+
+
 <hr/>
 <img src="@Model.ImageMain" alt="@Model.Species">
 <p><br></p>
@@ -39,8 +42,8 @@ else
   <h1>Info</h1>
   <p>@Html.DisplayNameFor(model => model.Species): @Html.DisplayFor(model => model.Species)</p>
   <p>@Html.DisplayNameFor(model => model.PokeTypeName): @Html.DisplayFor(model => model.PokeTypeName)</p>
-  <p>@Html.DisplayNameFor(model => model.Height): @Html.DisplayFor(model => model.Height)</p>
-  <p>@Html.DisplayNameFor(model => model.Weight): @Html.DisplayFor(model => model.Weight)</p>
+  <p>@Html.DisplayNameFor(model => model.Height): @Html.DisplayFor(model => model.Height) Meters</p>
+  <p>@Html.DisplayNameFor(model => model.Weight): @Html.DisplayFor(model => model.Weight) Kg</p>
   <p>@Html.DisplayNameFor(model => model.Ability): @Html.DisplayFor(model => model.Ability)</p>
 </div>
 

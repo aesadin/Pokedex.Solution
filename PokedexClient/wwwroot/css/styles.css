@@ -12,14 +12,14 @@ body {
 }
 
 .card {
-  margin-top: 3%;
+  margin-top: 2%;
   margin-bottom: 3%;
   padding: 2%;
-  background-color: rgba(245, 245, 245, 0.75);
+  background-color: rgba(245, 245, 245, 0.85);
   border-radius: 10px;
-  max-height: 600px;
+  box-shadow: 2px 4px 5px 5.5px #605f8d;
+  max-height: 640px;
   overflow-y: scroll;
-  box-shadow: 2px 4px 8px #757575;
 }
 
 div#footer {
@@ -37,15 +37,18 @@ h1  {
   color: rgb(218, 0, 0);
   text-shadow: 1px 2px 3px #757575;
 }
-
 .header {
   font-size: 2rem;
+}
+
+p {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
 }
 
 a {
   text-decoration: none;
 }
-
 a:hover {
   color: red;
 }
@@ -62,5 +65,10 @@ li  {
 
 .next-button  {
   text-align: center;
+  font-family: 'Slackey', cursive;
+  font-size: 1rem;
+}
+.next-button:link  {
+  text-decoration: none;
 }
 
