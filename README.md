@@ -33,7 +33,7 @@
   3. _Click "Finish_
 
 * _Download this application from GitHub_
-  1. _Open the following web address in your browser: **`https://github.com/aesadin`**_
+  1. _Open the following web address in your browser: **`https://github.com/tmemmerson`**_
   2. _Click on the button labeled_ Repositories
   3. _Navigate into the **`Pokedex.Solution`** repository and click the green button labeled "Clone or download" and download the zip to your computer_
 

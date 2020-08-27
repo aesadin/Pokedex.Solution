@@ -12,36 +12,36 @@
   <h3>No Pokémon have been added yet!</h3>
 }
 <div class="row">
-<div class="col-md-4">
-@foreach(Pokemon pokemon in Model)
-{
-  if (pokemon.PokemonId <= 50)
-  {
-  <P><img src="@pokemon.ImageSprite" alt="@pokemon.Species"></p>
-  <P id="name">@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</p>
-  }
-}  
-</div>
-<div class="col-md-4">
-@foreach(Pokemon pokemon in Model)
-{
-  if (pokemon.PokemonId > 50 && pokemon.PokemonId <= 100)
-  {
-  <P><img src="@pokemon.ImageSprite" alt="@pokemon.Species"></p>
-  <P id="name">@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</p>
-  }
-}
-</div>
-<div class="col-md-4">
-@foreach(Pokemon pokemon in Model)
-{
-  if (pokemon.PokemonId > 100)
-  {
-  <P><img src="@pokemon.ImageSprite" alt="@pokemon.Species"></p>
-  <P id="name">@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</p>
-  }
-}
-</div>
+  <div class="col-md-4">
+    @foreach(Pokemon pokemon in Model)
+    {
+      if (pokemon.PokemonId <= 51)
+      {
+      <P><img src="@pokemon.ImageSprite" alt="@pokemon.Species"></p>
+      <P id="name">@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</p>
+      }
+    }  
+  </div>
+  <div class="col-md-4">
+    @foreach(Pokemon pokemon in Model)
+    {
+      if (pokemon.PokemonId > 51 && pokemon.PokemonId <= 103)
+      {
+      <P><img src="@pokemon.ImageSprite" alt="@pokemon.Species"></p>
+      <P id="name">@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</p>
+      }
+    }
+  </div>
+  <div class="col-md-4">
+    @foreach(Pokemon pokemon in Model)
+    {
+      if (pokemon.PokemonId > 103)
+      {
+      <P><img src="@pokemon.ImageSprite" alt="@pokemon.Species"></p>
+      <P id="name">@Html.ActionLink($"{pokemon.Species}", "Details", new { id = pokemon.PokemonId })</p>
+      }
+    }
+  </div>
 </div>
 
 

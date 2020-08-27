@@ -25,7 +25,9 @@ body {
 .card::-webkit-scrollbar {
   display: none;
 }
-
+#splash {
+  border-radius: 10%
+}
 
 div#footer {
   position: fixed;
