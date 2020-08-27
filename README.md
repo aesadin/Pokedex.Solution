@@ -12,27 +12,15 @@
 
 <!-- Stretch goals: publish project, Silhouette guessing game, MyTeam creator, Identity authentication -->
 
-* As a Pokemon Master, I need to be able to create a user profile, So that I can access my user specific information. (CREATE)
+* As a Pokemon Master, I need to be able to navigate to th Pokedex home index page
 
-* As a Pokemon Master, I need to be able to edit it my specific user information (name, color, group, etc..) (UPDATE)
+* As a Pokemon Master, I need to be able to navigate to a Pokemon index page, so that I can see all recorded Pokemon
 
-* As a Pokemon Master, I need to be able to enter my username and password, so that I can login to the application. (IDENTITY)
+* As a Pokemon Master, I need to be able to click on a specific Pokemon, so that I can see that Pokemon's details, and it's associated type
 
-* As a Pokemon Master, I need to be able to go to a Pokemon index page, so that I can see all recorded Pokemon (GET)
+* As a Pokemon Master, I need to be able to navigate to a types index page, so that I can see all Pokemon types
 
-* As a Pokemon Master, I need to be able to click on a specific Pokemon, so that I can see that Pokemon's details, and it's associated type(s) (GET {id})
-
-* As a Pokemon Master, I need to be able to go to a types index page, so that I can see all Pokemon types (GET)
-
-* As a Pokemon Master, I need to be able to click on a specific type, so that I can see that type's details, and it's associated Pokemon (GET {id})
-
-* As a Pokemon Master, I need to be able to click on a specific Pokemon, so that I can add it to my user profile (CREATE JOIN)
-
-* As a Pokemon Master, I need to be able to click on my profile, so that I can see a list of all of my associated Pokemon (READ, for User)
-
-* As a Pokemon Master, I need to be able to click on a specific Pokemon within my profile, so that I can see that Pokemon's details (GET {id}, READ)
-
-* As a Pokemon Master, I need to be able to remove a specific Pokemon from my list of associated Pokemon (DELETE)
+* As a Pokemon Master, I need to be able to click on a specific type, so that I can see that type's details, and it's associated Pokemon
 
 ## Setup/Installation Requirements
 
@@ -56,9 +44,8 @@
 
 * _Run the application_
   1. _In the terminal, navigate to the project directory by running the command `> cd Pokedex`_
-  2. _Now that we are in the LocalShops directory you will run the command `> dotnet ef migrations add Demo`_
-  3. _Once your terminal has finished loading you will run the command `> dotnet ef database update`_
-  4. _Once you see the Migrations directory pop up you can run the command `> dotnet run`_
+  2. _Now that we are in the Pokedex directory you will run the command `> dotnet ef database update`_
+  3. _Once your terminal has finished loading you will run the command `> dotnet run`_
 
 ## Known Bugs
 
@@ -126,13 +113,21 @@ Wednesday:
 Thursday
 
 - Clean up/update readme
-- clean up commented out code/unused files
+X clean up commented out code/unused files
 X Update arrows
 - Delegate presentation roles
 - Spruce up the home index
 - arrange pokemon index in rows
-- add units to weight and height
-- increase card height ~20 px
+X add units to weight and height
+X increase card height ~20 px
 - Center pokemon index and name?
+-
+
+Roles:
+Explanation of API/ technologies used ________
+Website walk through _______
+Explanation of Stretch goals _______
+Explanation of TeamWork Method _________
+Explanation of Problems we ran into _________
 
 
